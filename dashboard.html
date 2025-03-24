@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-style layout-navbar-fixed layout-menu-fixed" dir="ltr" data-theme="theme-semi-dark" data-assets-path="https://dash.creepercastle.in/assets/" data-template="vertical-menu-template">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="author" content="MythicalSystems">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/fyms40G5/Creeper-Castle-Logo.webp">
+    <meta name="twitter:description" content="'MythicalDash is a feature-rich and user-friendly client area for Pterodactyl, designed to simplify server management. With MythicalDash, you have unparalleled control over your hosting environment, effortlessly managing game servers, databases, files, and more. Experience seamless server administration, enhanced security, and optimized performance with MythicalDash, your ultimate solution for streamlined Pterodactyl server management.'">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://i.postimg.cc/fyms40G5/Creeper-Castle-Logo.webp">
+    <meta property="og:image" content="https://i.postimg.cc/fyms40G5/Creeper-Castle-Logo.webp">
+    <meta name="description" content="'MythicalDash is a feature-rich and user-friendly client area for Pterodactyl, designed to simplify server management. With MythicalDash, you have unparalleled control over your hosting environment, effortlessly managing game servers, databases, files, and more. Experience seamless server administration, enhanced security, and optimized performance with MythicalDash, your ultimate solution for streamlined Pterodactyl server management.'">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="CreeperCastle">
+    <meta name="og:title" content="CreeperCastle">
+    <meta name="keywords" content="Pterodactyl client area, server management, game servers, MythicalDash, advanced features, server administration, streamlined management, hosting environment, database management, file management, efficient performance, enhanced security, optimized server management."
+    />
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.postimg.cc/fyms40G5/Creeper-Castle-Logo.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/fonts/tabler-icons.css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/fonts/flag-icons.css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/libs/node-waves/node-waves.css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/libs/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/libs/formvalidation/dist/css/formValidation.min.css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/libs/bs-stepper/bs-stepper.css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/libs/bootstrap-select/bootstrap-select.css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/vendor/libs/select2/select2.css" />
+    <script src="https://dash.creepercastle.in/assets/vendor/js/helpers.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/js/template-customizer.js"></script>
+    <script src="https://dash.creepercastle.in/assets/js/config.js"></script>
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/css/preloader.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        #template-customizer .template-customizer-open-btn {
+            visibility: hidden;
+        }
+
+        .badge.requestor-type {
+            font-size: 10px;
+            vertical-align: middle;
+            background-color: #28a745;
+        }
+
+        body {
+            background-image: url('https://wallpapers.com/images/hd/minecraft-great-cave-walls-forest-hd-mm9b3bqe6qc6s96f.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/css/demo.css" />
+    <link rel="stylesheet" href="https://dash.creepercastle.in/assets/css/v3.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cursor.js/dist/cursor.min.js"></script>
+
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <link rel="manifest" href="/manifest.webmanifest">
+    <title>
+        CreeperCastle - Dashboard </title>
+</head>
+
+<body>
+    <div id="preloader" class="discord-preloader">
+        <div class="spinner"></div>
+    </div>
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="app-brand demo">
+                    <a href="/" class="app-brand-link">
+      <span class="app-brand-text demo menu-text fw-bold">
+        CreeperCastle      </span>
+    </a>
+                </div>
+
+                <div class="menu-inner-shadow"></div>
+
+                <ul class="menu-inner py-1">
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">
+        Home      </span>
+                    </li>
+                    <li class="menu-item active">
+                        <a href="/dashboard" class="menu-link">
+        <i class="menu-icon tf-icons ti ti-home"></i>
+        <div>
+          Dashboard        </div>
+      </a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="/server/create" class="menu-link">
+        <i class="menu-icon tf-icons ti ti-server"></i>
+        <div>
+          Create server        </div>
+      </a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons ti ti-currency-euro"></i>
+        <div>
+          Earn        </div>
+      </a>
+                        <ul class="menu-sub">
+
+                            <li class="menu-item ">
+                                <a href="/earn/redeem" class="menu-link">
+                                    <div>
+                                        Redeem </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="/store" class="menu-link">
+        <i class="menu-icon tf-icons ti ti-shopping-cart"></i>
+        <div> Shop</div>
+      </a>
+                    </li>
+                    <li class="menu-item  ">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <i class="menu-icon tf-icons ti ti-messages"></i>
+        <div>
+          Help-Center        </div>
+      </a>
+                        <ul class="menu-sub">
+                            <li class="menu-item">
+                                <a href="/help-center" class="menu-link">
+                                    <div>
+                                        Home </div>
+                                </a>
+                            </li>
+                            <li class="menu-item ">
+                                <a href="/help-center/tickets" class="menu-link">
+                                    <div>
+                                        Ticket </div>
+                                </a>
+                            </li>
+                            <li class="menu-item ">
+                                <a href="/help-center/tos" class="menu-link">
+                                    <div>
+                                        Terms of service </div>
+                                </a>
+                            </li>
+                            <li class="menu-item ">
+                                <a href="/help-center/pp" class="menu-link">
+                                    <div>
+                                        Privacy policy </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="/leaderboard" class="menu-link">
+        <i class="menu-icon tf-icons ti ti-star"></i>
+        <div>
+          Leaderboard        </div>
+      </a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="/users/list" class="menu-link">
+        <i class="menu-icon tf-icons ti ti-users"></i>
+        <div>
+          Users        </div>
+      </a>
+                    </li>
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">
+        Links      </span>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="https://free.creepercastle.cloud" target="_blank" class="menu-link">
+        <i class="menu-icon tf-icons ti ti-feather"></i>
+        <div>Pterodactyl Panel</div>
+      </a>
+                    </li>
+                    <li class="menu-item ">
+                        <a href="https://discord.gg/xUGNwePZmY" target="_blank" class="menu-link">
+        <i class="menu-icon tf-icons ti ti-brand-discord"></i>
+        <div>Discord Server</div>
+      </a>
+                    </li>
+                </ul>
+            </aside>
+            <div class="layout-page">
+                <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme" id="layout-navbar">
+                    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+                        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+      <i class="ti ti-menu-2 ti-sm"></i>
+    </a>
+                    </div>
+
+                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                        <div class="navbar-nav align-items-center">
+                            <div class="nav-item navbar-search-wrapper mb-0">
+                                <a class="nav-item nav-link search-toggler d-flex align-items-center px-0" href="javascript:void(0);">
+          <i class="ti ti-search ti-md me-2"></i>
+          <span class="d-none d-md-inline-block text-muted">
+            Search (Ctrl+/)
+          </span>
+        </a>
+                            </div>
+                        </div>
+
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
+                            <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+          <i class="ti ti-bell ti-md"></i>
+          <!--<span class="badge bg-danger rounded-pill badge-notifications">5</span>-->
+        </a>
+                                <ul class="dropdown-menu dropdown-menu-end py-0">
+                                    <li class="dropdown-menu-header border-bottom">
+                                        <div class="dropdown-header d-flex align-items-center py-3">
+                                            <h5 class="text-body mb-0 me-auto">
+                                                Notification </h5>
+                                            <a href="javascript:void(0)" class="dropdown-notifications-all text-body" data-bs-toggle="tooltip" data-bs-placement="top" title=""><i class="ti ti-mail-opened fs-4"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-notifications-list scrollable-container">
+
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+          <i class="ti ti-layout-grid-add ti-md"></i>
+        </a>
+                                <div class="dropdown-menu dropdown-menu-end py-0">
+                                    <div class="dropdown-menu-header border-bottom">
+                                        <div class="dropdown-header d-flex align-items-center py-3">
+                                            <h5 class="text-body mb-0 me-auto">Useful Tools</h5>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-shortcuts-list scrollable-container ps">
+                                        <div class="row row-bordered overflow-visible g-0">
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                  <i class="ti ti-ruler fs-4"></i>
+                </span>
+                                                <a target="_new" href="https://minecraft.tools/en/motd.php" class="stretched-link">Motd</a>
+                                                <small class="text-muted mb-0">Minecraft</small>
+                                            </div>
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                  <i class="ti ti-file-invoice fs-4"></i>
+                </span>
+                                                <a target="_new" href="https://mctools.org/votifier-tester" class="stretched-link">Votifier tester</a>
+                                                <small class="text-muted mb-0">Minecraft</small>
+                                            </div>
+                                        </div>
+                                        <div class="row row-bordered overflow-visible g-0">
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                  <i class="ti ti-users fs-4"></i>
+                </span>
+                                                <a target="_new" href="https://www.birdflop.com/resources/rgb/" class="stretched-link">RGB Generator</a>
+                                                <small class="text-muted mb-0">Minecraft</small>
+                                            </div>
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                  <i class="ti ti-lock fs-4"></i>
+                </span>
+                                                <a target="_new" href="https://etcgamer.com/minecraft-symbols-emojis/" class="stretched-link">MC Emojis</a>
+                                                <small class="text-muted mb-0">Minecraft</small>
+                                            </div>
+                                        </div>
+                                        <div class="row row-bordered overflow-visible g-0">
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                  <i class="ti ti-chart-bar fs-4"></i>
+                </span>
+                                                <a target="_new" href="https://mcutils.com/server-icon-converter" class="stretched-link">Server Icon</a>
+                                                <small class="text-muted mb-0">Minecraft</small>
+                                            </div>
+                                            <div class="dropdown-shortcuts-item col">
+                                                <span class="dropdown-shortcuts-icon rounded-circle mb-2">
+                  <i class="ti ti-settings fs-4"></i>
+                </span>
+                                                <a target="_new" href="https://www.birdflop.com/resources/flags/" class="stretched-link">Flags</a>
+                                                <small class="text-muted mb-0">Minecraft</small>
+                                            </div>
+                                        </div>
+                                        <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                            <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                                        </div>
+                                        <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                                            <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- User -->
+                            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                                    <div class="avatar avatar-online">
+                                        <img src="https://www.gravatar.com/avatar/6c31ccaf8b71036fe271f2af4e8b11e7?d=https%3A%2F%2Fwww.gravatar.com%2Favatar%2F00000000000000000000000000000000" alt class="h-auto rounded-circle" />
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" href="/user/profile?id=339">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div class="avatar avatar-online">
+                                                        <img src="https://www.gravatar.com/avatar/6c31ccaf8b71036fe271f2af4e8b11e7?d=https%3A%2F%2Fwww.gravatar.com%2Favatar%2F00000000000000000000000000000000" alt class="h-auto rounded-circle" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <span class="fw-semibold d-block">
+                    meowsamop                    <span class="badge bg-success requestor-type ms-2">
+                      User                    </span>
+                                                    </span>
+                                                    <small class="text-muted">
+                    5                    Coin(s)                  </small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/user/profile?id=339">
+              <i class="ti ti-user-check me-2 ti-sm"></i>
+              <span class="align-middle">
+                Profile              </span>
+            </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/user/edit">
+              <i class="ti ti-settings me-2 ti-sm"></i>
+              <span class="align-middle">
+                Account              </span>
+            </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/user/connections">
+              <i class="ti ti-select me-2 ti-sm"></i>
+              <span class="align-middle">
+                Connections              </span>
+            </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/user/payments">
+              <i class="ti ti-coin me-2 ti-sm"></i>
+              <span class="align-middle">
+                Payments              </span>
+            </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/help-center/">
+              <i class="ti ti-lifebuoy me-2 ti-sm"></i>
+              <span class="align-middle">
+                Help-Center              </span>
+            </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="/auth/logout">
+              <i class="ti ti-logout me-2 ti-sm"></i>
+              <span class="align-middle">
+                Logout              </span>
+            </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--/ User -->
+                        </ul>
+                    </div>
+                    <div class="navbar-search-wrapper search-input-wrapper d-none">
+                        <input type="text" class="form-control search-input container-xxl border-0" placeholder="Search..." aria-label="Search...." />
+                        <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
+                    </div>
+                </nav>
+                <div class="content-wrapper">
+                    <div class="container-xxl flex-grow-1 container-p-y">
+                        <div class="">
+                            <!-- Statistics -->
+                            <div class="card h-100">
+                                <div class="card-header">
+                                    <div class="text-center justify-content-between mb-3">
+                                        <h5 class="card-title mb-0">
+                                            Statistics </h5>
+                                        <small id="updateText" class="text-muted">Updated 0 seconds ago</small>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row gy-3 mb-2">
+                                        <div class="col-md-3 col-6 text-center">
+                                            <span>
+                                    Ram                                 </span>
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge rounded-pill bg-label-primary me-3 p-2">
+                                                    <i class="fas fa-memory fa-2x"></i>
+                                                </div>
+                                                <div class="resources" style="position: relative; overflow: hidden; border-radius: 10px;">
+
+                                                    <h5 class="mb-0">
+                                                        0MB / 0MB
+                                                    </h5>
+                                                    <div style="position: absolute; content: ''; background-image: linear-gradient(180deg, rgb(100, 195, 252), rgb(59, 163, 237)); inset: 5px; border-radius: 15px; animation: rotBGimg 3.5s linear infinite;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3 col-6 text-center">
+                                            <span>
+                                    Disk                                 </span>
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge rounded-pill bg-label-primary me-3 p-2">
+                                                    <i class="fa fa-save fa-2x"></i>
+                                                </div>
+                                                <div class="resources text-center">
+                                                    <h5 class="mb-0">
+                                                        0MB / 0MB
+                                                    </h5>
+                                                    <div style="position: absolute; content: ''; background-image: linear-gradient(180deg, rgb(100, 195, 252), rgb(59, 163, 237)); inset: 5px; border-radius: 15px; animation: rotBGimg 3.5s linear infinite;">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center">
+                                            <span>
+                                    Cpu                                 </span>
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge rounded-pill bg-label-primary me-3 p-2">
+                                                    <i class="fas fa-microchip fa-2x"></i>
+                                                </div>
+                                                <div class="resources">
+                                                    <h5 class="mb-0">
+                                                        0% / 0%
+                                                    </h5>
+                                                    <div style="position: absolute; content: ''; background-image: linear-gradient(180deg, rgb(100, 195, 252), rgb(59, 163, 237)); inset: 5px; border-radius: 15px; animation: rotBGimg 3.5s linear infinite;">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center">
+                                            <span>
+                                    Server Slot(s)                                 </span>
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge rounded-pill bg-label-primary me-3 p-2">
+                                                    <i class="fas fa-server fa-2x"></i>
+                                                </div>
+                                                <div class="resources">
+                                                    <h5 class="mb-0">
+                                                        0 / 1 </h5>
+                                                    <div style="position: absolute; content: ''; background-image: linear-gradient(180deg, rgb(100, 195, 252), rgb(59, 163, 237)); inset: 5px; border-radius: 15px; animation: rotBGimg 3.5s linear infinite;">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row gy-3">
+                                        <div class="col-md-3 col-6 text-center">
+                                            <span>
+                                    Server Backup(s)                                 </span>
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge rounded-pill bg-label-primary me-3 p-2">
+                                                    <i class="fa fa-network-wired fa-2x"></i>
+                                                </div>
+                                                <div class="resources">
+                                                    <h5 class="mb-0">
+                                                        0 / 1 </h5>
+                                                    <div style="position: absolute; content: ''; background-image: linear-gradient(180deg, rgb(100, 195, 252), rgb(59, 163, 237)); inset: 5px; border-radius: 15px; animation: rotBGimg 3.5s linear infinite;">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center">
+                                            <span>
+                                    Server Allocation(s)                                 </span>
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge rounded-pill bg-label-primary me-3 p-2">
+                                                    <i class="fas fa-microchip fa-2x"></i>
+                                                </div>
+                                                <div class="resources">
+                                                    <h5 class="mb-0">
+                                                        0 / 1 </h5>
+                                                    <div style="position: absolute; content: ''; background-image: linear-gradient(180deg, rgb(100, 195, 252), rgb(59, 163, 237)); inset: 5px; border-radius: 15px; animation: rotBGimg 3.5s linear infinite;">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center">
+                                            <span>
+                                    Server Database(s)                                 </span>
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge rounded-pill bg-label-primary me-3 p-2">
+                                                    <i class="fas fa-database fa-2x"></i>
+                                                </div>
+                                                <div class="resources">
+                                                    <h5 class="mb-0">
+                                                        0 / 1 </h5>
+                                                    <div style="position: absolute; content: ''; background-image: linear-gradient(180deg, rgb(100, 195, 252), rgb(59, 163, 237)); inset: 5px; border-radius: 15px; animation: rotBGimg 3.5s linear infinite;">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-6 text-center">
+                                            <span>
+                                    Coin(s)                                 </span>
+                                            <div class="d-flex align-items-center">
+                                                <div class="badge rounded-pill bg-label-primary me-3 p-2">
+                                                    <i class="fas fa-coins fa-2x"></i>
+                                                </div>
+                                                <div class="resources">
+                                                    <h5 class="mb-0">
+                                                        5 </h5>
+                                                    <div style="position: absolute; content: ''; background-image: linear-gradient(180deg, rgb(100, 195, 252), rgb(59, 163, 237)); inset: 5px; border-radius: 15px; animation: rotBGimg 3.5s linear infinite;">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card bg-default shadow">
+                                    <div class="card-header bg-transparent border-0 text-center">
+                                        <h5 class="card-title mb-0">
+                                            Your servers: </h5>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table align-items-center table-flush">
+                                            <tbody class="list">
+                                                <div style="text-align: center;">
+                                                    <img src="/assets/img/empty.svg" height="150" />
+                                                    <br>
+                                                    <h4 style="">
+                                                        No servers yet. Why not create one? </h4>
+                                                    <a href="/server/create" class="btn btn-primary">
+                                             No servers yet. Why not create one?                                          </a><br /><br />
+                                                </div>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="ads">
+                        </div>
+                    </div>
+                    <footer class="content-footer footer bg-footer-theme">
+                        <div class="container-xxl">
+                            <div class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
+                                <div>
+                                    Copyright© 2019 -
+                                    <script>
+                                        document.write(new Date().getFullYear());
+                                    </script>
+                                    made with ❤️ by <a href="https://github.com/mythicalltd" target="_blank" class="fw-semibold">MythicalSystems</a>
+                                </div>
+                                <div>
+                                    <a href="https://free.creepercastle.cloud" target="_blank" class="footer-link me-4">Pterodactyl</a>
+                                    <a href="/help-center/tos" target="_blank" class="footer-link me-4">Terms of service</a>
+                                    <a href="/help-center/pp" target="_blank" class="footer-link d-none d-sm-inline-block">Privacy policy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <div class="content-backdrop fade"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layout-overlay layout-menu-toggle"></div>
+        <div class="drag-target"></div>
+    </div>
+    <!-- Core JS -->
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/jquery/jquery.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/popper/popper.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/js/bootstrap.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/node-waves/node-waves.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/hammer/hammer.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/i18n/i18n.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/js/menu.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/moment/moment.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/select2/select2.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/cleavejs/cleave.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/cleavejs/cleave-phone.js"></script>
+    <script src="https://dash.creepercastle.in/assets/js/main.js"></script>
+    <script src="https://dash.creepercastle.in/assets/vendor/libs/bs-stepper/bs-stepper.js"></script>
+    <script src="https://dash.creepercastle.in/assets/js/MythicalGuard.js"></script>
+    <script src="https://dash.creepercastle.in/assets/js/preloader.js"></script>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.ctrlKey && event.keyCode === 68) {
+                event.preventDefault();
+                Swal.fire({
+                    title: 'Enter Dialog Number',
+                    input: 'text',
+                    inputAttributes: {
+                        autocapitalize: 'off',
+                    },
+                    icon: 'question',
+                    text: 'Enter the number of the dialog you would like to open.',
+                    showCancelButton: true,
+                    confirmButtonText: 'Go',
+                    showLoaderOnConfirm: true,
+                    preConfirm: (userInput) => {
+                        if (userInput === null || userInput.trim() === '') {
+                            window.location.href = '/dashboard';
+                        } else {
+                            switch (userInput) {
+                                case "1":
+                                    window.location.href = "/dashboard";
+                                    break;
+                                case "2":
+                                    window.location.href = "/server/create";
+                                    break;
+                                case "3":
+                                    window.location.href = "/earn/afk";
+                                    break;
+                                case "4":
+                                    window.location.href = "/earn/redeem";
+                                    break;
+                                case "5":
+                                    window.location.href = "/earn/linkvertise";
+                                    break;
+                                case "6":
+                                    window.location.href = "/store";
+                                    break;
+                                case "7":
+                                    window.location.href = "/help-center";
+                                    break;
+                                case "8":
+                                    window.location.href = "/help-center/tickets";
+                                    break;
+                                case "9":
+                                    window.location.href = "/help-center/tos";
+                                    break;
+                                case "10":
+                                    window.location.href = "/help-center/pp";
+                                    break;
+                                case "11":
+                                    window.location.href = "/leaderboard";
+                                    break;
+                                case "12":
+                                    window.location.href = "/users/list";
+                                    break;
+                                case "13":
+                                    window.location.href = "/user/edit";
+                                    break;
+                                case "14":
+                                    window.location.href = "/user/connections";
+                                    break;
+                                case "15":
+                                    window.location.href = "/user/payments";
+                                    break;
+                                case "0":
+                                    window.location.href = "/auth/logout";
+                                    break;
+                                case "100":
+                                    window.location.href = "/admin/overview";
+                                    break;
+                                case "101":
+                                    window.location.href = "/admin/health";
+                                    break;
+                                case "102":
+                                    window.location.href = "/admin/api";
+                                    break;
+                                case "103":
+                                    window.location.href = "/admin/users";
+                                    break;
+                                case "104":
+                                    window.location.href = "/admin/servers/list";
+                                    break;
+                                case "105":
+                                    window.location.href = "/admin/servers/queue/list";
+                                    break;
+                                case "106":
+                                    window.location.href = "/admin/servers/queue/logs";
+                                    break;
+                                case "107":
+                                    window.location.href = "/admin/redeem";
+                                    break;
+                                case "108":
+                                    window.location.href = "/admin/locations";
+                                    break;
+                                case "109":
+                                    window.location.href = "/admin/eggs/list";
+                                    break;
+                                case "110":
+                                    window.location.href = "/admin/eggs/config";
+                                    break;
+                                case "111":
+                                    window.location.href = "/admin/settings";
+                                    break;
+                                case "112":
+                                    window.location.href = "/admin/tickets";
+                                    break;
+                                case "1000":
+                                    fetchAndDisplayInfo();
+                                    break;
+                                case "2000":
+                                    fetchAndDisplaySystemInfo();
+                                    break;
+                                case "3000":
+                                    window.location.href = "/mythicaldash/logs";
+                                    break;
+                                default:
+                                    Swal.fire({
+                                        title: 'Invalid Dialog',
+                                        text: 'The dialog number you entered is invalid. Please try again.',
+                                        icon: 'error',
+                                        confirmButtonText: 'OK',
+                                    });
+                            }
+                        }
+                    },
+                });
+
+            }
+        });
+
+        function fetchAndDisplayInfo() {
+            fetch('/mythicaldash/info')
+                .then(response => response.json())
+                .then(data => {
+                    alert(`Dash Name: ${data.data.dash_name}`);
+                    alert(`Dash Version: ${data.data.dash_version}`);
+                    alert(`Security Modules:
+                        - Turnstile: ${data.data.security_modules.turnstile}
+                        - Anti-Adblocker: ${data.data.security_modules['anti-adblocker']}
+                        - Anti-Alting: ${data.data.security_modules['anti-alting']}
+                        - Anti-VPN: ${data.data.security_modules['anti-vpn']}
+                        - Purge: ${data.data.security_modules.purge}`);
+                    alert(`Stripe:
+                        - Enabled: ${data.data.stripe.enabled}
+                        - Public Key: ${data.data.stripe['public-key']}
+                        - Currency: ${data.data.stripe.currency}`);
+                    alert(`Linkvertise:
+                        - Enabled: ${data.data.linkvertise.enabled}
+                        - Code: ${data.data.linkvertise.code}
+                        - Coins: ${data.data.linkvertise.coins}`);
+                    alert(`Pterodactyl:
+                        - URL: ${data.data.pterodactyl.url}`);
+                    alert(`SMTP:
+                        - Enabled: ${data.data.smtp.enabled}
+                        - Encryption: ${data.data.smtp.encryption}
+                        - Port: ${data.data.smtp.port}
+                        - From: ${data.data.smtp.from}`);
+                    alert(`Discord:
+                        - Account Link: ${data.data.discord.account_link}
+                        - Server ID: ${data.data.discord.server_id}
+                        - Client ID: ${data.data.discord.client_id}`);
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                    alert('Error fetching data. Please try again later.');
+                });
+        }
+
+        function fetchAndDisplaySystemInfo() {
+            fetch('/mythicaldash/system')
+                .then(response => response.json())
+                .then(data => {
+                    alert(`Operating System: ${data.data.os}\nHostname: ${data.data.hostname}\nKernel: ${data.data.kernel}\nVersion: ${data.data.version}\nArchitecture: ${data.data.arch}`);
+                })
+                .catch(error => {
+                    console.error('Error fetching system info:', error);
+                    alert('Error fetching system info. Please try again later.');
+                });
+        }
+    </script>
+    <script>
+        let fakeAd = document.createElement("div");
+        fakeAd.className =
+            "textads banner-ads banner_ads ad-unit ad-zone ad-space adsbox"
+
+        fakeAd.style.height = "1px"
+
+        document.body.appendChild(fakeAd)
+
+        let x_width = fakeAd.offsetHeight;
+        let msg = document.getElementById("msg")
+
+
+        if (x_width) {
+
+        } else {
+            window.location.replace("/e/adblock");
+        }
+    </script>
+    <script>
+        anime({
+            targets: '.navbar',
+            translateY: [-100, 0],
+            easing: 'easeInOutQuad',
+            duration: 1000
+        });
+
+        const cardAnimation = anime.timeline({
+            targets: '.card',
+            easing: 'easeInOutQuad',
+        });
+
+        cardAnimation
+            .add({
+                translateY: [100, 0],
+                opacity: [0, 1],
+                duration: 1000,
+                delay: anime.stagger(100),
+            });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            cardAnimation.play();
+        });
+
+        function animateDropdown(element, startY, endY) {
+            anime({
+                targets: element,
+                translateY: [startY, endY],
+                easing: 'easeInOutQuad',
+                duration: 500
+            });
+        }
+
+        document.querySelectorAll('.dropdown-toggle').forEach(function(dropdownToggle) {
+            dropdownToggle.addEventListener('click', function(event) {
+                var dropdownMenu = this.nextElementSibling;
+                if (dropdownMenu.classList.contains('show')) {
+                    animateDropdown(dropdownMenu, 0, 10);
+                } else {
+                    animateDropdown(dropdownMenu, -10, 0);
+                }
+            });
+        });
+    </script>
+    <script src="https://dash.creepercastle.in/assets/js/dashboards-ecommerce.js"></script>
+    <script>
+        function updateElapsedTime() {
+            const updateTextElement = document.getElementById('updateText');
+            const startDate = new Date();
+
+            function updateText() {
+                const now = new Date();
+                const timeDiff = now - startDate;
+                let elapsed = '';
+
+                if (timeDiff >= 1000 * 60 * 60 * 24 * 30) {
+                    const months = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 30));
+                    elapsed = months === 1 ? 'month' : 'months';
+                    updateTextElement.textContent = `Updated ${months} ${elapsed} ago`;
+                } else if (timeDiff >= 1000 * 60 * 60 * 24) {
+                    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                    elapsed = days === 1 ? 'day' : 'days';
+                    updateTextElement.textContent = `Updated ${days} ${elapsed} ago`;
+                } else if (timeDiff >= 1000 * 60 * 60) {
+                    const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+                    elapsed = hours === 1 ? 'hour' : 'hours';
+                    updateTextElement.textContent = `Updated ${hours} ${elapsed} ago`;
+                } else if (timeDiff >= 1000 * 60) {
+                    const minutes = Math.floor(timeDiff / (1000 * 60));
+                    elapsed = minutes === 1 ? 'minute' : 'minutes';
+                    updateTextElement.textContent = `Updated ${minutes} ${elapsed} ago`;
+                } else {
+                    const seconds = Math.floor(timeDiff / 1000);
+                    elapsed = seconds === 1 ? 'second' : 'seconds';
+                    updateTextElement.textContent = `Updated ${seconds} ${elapsed} ago`;
+                }
+            }
+
+            setInterval(updateText, 1000);
+        }
+        window.onload = updateElapsedTime;
+    </script>
+    <script>
+        function confirmDeleteAction(serverId) {
+            // Use SweetAlert2 for a custom confirmation dialog
+            Swal.fire({
+                title: 'Are you sure???',
+                text: 'This action cannot be undone!',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // If the user clicks "Yes, delete it!", redirect to the delete URL
+                    window.location.href = `/server/delete?server=${serverId}`;
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
